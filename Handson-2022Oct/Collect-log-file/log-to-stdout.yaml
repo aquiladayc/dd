@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    ad.datadoghq.com/log-to-stdout.logs: '[{"source": "log-to-stdout", "service": "log-test"}]'
+  name: log-to-stdout
+spec:
+  restartPolicy: Never
+  containers:
+  - name: log-to-stdout
+    image: alpine:latest
+    command:
+    - "sh"
+    - "-c"
+    - "x=1; while true ; do echo \" Hello, Logging to stdout!\"; printf $x; sleep 10; x=$((x+1)); done"
