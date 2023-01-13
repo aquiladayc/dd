@@ -11,4 +11,4 @@ jobs:
         - uses: jenschelkopf/issue-label-notification-action@1.3
           with:
              recipients: |
-                  support-containers=@aquiladayc
+                  support-containers=@aquiladayc @JM-Lazaro
